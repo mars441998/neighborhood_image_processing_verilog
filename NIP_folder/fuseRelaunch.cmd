@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/6th Semester/VLSI Lab/CEP/CEP/cmt_test_isim_beh.exe" -prj "E:/6th Semester/VLSI Lab/CEP/CEP/cmt_test_beh.prj" "work.cmt_test" "work.glbl" 

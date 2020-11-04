@@ -1,0 +1,443 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : NO
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" into library work
+Parsing module <clock>.
+Analyzing Verilog file "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\my_bram8x8.v" into library work
+Parsing module <my_bram8x8>.
+Analyzing Verilog file "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" into library work
+Parsing module <main>.
+WARNING:HDLCompiler:751 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 23: Redeclaration of ansi port clk_in1 is not allowed
+WARNING:HDLCompiler:751 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 24: Redeclaration of ansi port clk_out1 is not allowed
+WARNING:HDLCompiler:751 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 25: Redeclaration of ansi port clk_out2 is not allowed
+WARNING:HDLCompiler:751 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 26: Redeclaration of ansi port clk_out3 is not allowed
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <main>.
+
+Elaborating module <my_bram8x8>.
+WARNING:HDLCompiler:1499 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\my_bram8x8.v" Line 39: Empty module <my_bram8x8> remains a black box.
+WARNING:HDLCompiler:189 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 34: Size mismatch in connection of port <addra>. Formal port size is 11-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 35: Size mismatch in connection of port <dina>. Formal port size is 8-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 37: Size mismatch in connection of port <addrb>. Formal port size is 9-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 38: Size mismatch in connection of port <doutb>. Formal port size is 32-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 38: Assignment to doutb ignored, since the identifier is never used
+
+Elaborating module <clock>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <MMCME2_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=1,CLKFBOUT_MULT_F=10.0,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=10.0,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKOUT1_DIVIDE=10,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.25,CLKOUT1_USE_FINE_PS="FALSE",CLKOUT2_DIVIDE=10,CLKOUT2_PHASE=180.0,CLKOUT2_DUTY_CYCLE=0.25,CLKOUT2_USE_FINE_PS="FALSE",CLKIN1_PERIOD=10.0,REF_JITTER1=0.01)>.
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 137: Assignment to clkfboutb_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 139: Assignment to clkout0b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 141: Assignment to clkout1b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 143: Assignment to clkout2b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 144: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 145: Assignment to clkout3b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 146: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 147: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 148: Assignment to clkout6_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 160: Assignment to do_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 161: Assignment to drdy_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 167: Assignment to psdone_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 170: Assignment to clkinstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v" Line 171: Assignment to clkfbstopped_unused ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 50: Assignment to LOCKED ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 33: Net <wea> does not have a driver.
+WARNING:HDLCompiler:634 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 34: Net <addra> does not have a driver.
+WARNING:HDLCompiler:634 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 35: Net <dina> does not have a driver.
+WARNING:HDLCompiler:634 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 37: Net <addrb> does not have a driver.
+WARNING:HDLCompiler:634 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" Line 49: Net <RESET> does not have a driver.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <main>.
+    Related source file is "E:\6th Semester\VLSI Lab\CEP\CEP\main.v".
+INFO:Xst:3210 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" line 31: Output port <doutb> of the instance <bram_v> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\6th Semester\VLSI Lab\CEP\CEP\main.v" line 41: Output port <LOCKED> of the instance <cmt> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <wea> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <addra> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <dina> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <addrb> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <RESET> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <CLK_S>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <main> synthesized.
+
+Synthesizing Unit <clock>.
+    Related source file is "E:\6th Semester\VLSI Lab\CEP\CEP\ipcore_dir\clock.v".
+    Summary:
+	no macro.
+Unit <clock> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ 1-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/my_bram8x8.ngc>.
+Loading core <my_bram8x8> for timing and area information for instance <bram_v>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 1
+ Flip-Flops                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3001 - This design contains one or more registers or latches with an active
+   asynchronous set and asynchronous reset. While this circuit can be built,
+   it creates a sub-optimal implementation in terms of area, power and
+   performance. For a more optimal implementation Xilinx highly recommends
+   one of the following:
+
+          1) Remove either the set or reset from all registers and latches if
+             not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Artix7 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    CLK_S in unit <main>
+
+
+Optimizing unit <main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2
+ Flip-Flops                                            : 2
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : main.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7
+#      GND                         : 2
+#      LUT2                        : 2
+#      LUT3                        : 1
+#      VCC                         : 2
+# FlipFlops/Latches                : 3
+#      FDC                         : 1
+#      FDP                         : 1
+#      LDC                         : 1
+# RAMS                             : 1
+#      RAMB36E1                    : 1
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 1
+#      IBUFG                       : 1
+# Others                           : 1
+#      MMCME2_ADV                  : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:               3  out of  126800     0%  
+ Number of Slice LUTs:                    3  out of  63400     0%  
+    Number used as Logic:                 3  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      6
+   Number with an unused Flip Flop:       3  out of      6    50%  
+   Number with an unused LUT:             3  out of      6    50%  
+   Number of fully used LUT-FF pairs:     0  out of      6     0%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                           4
+ Number of bonded IOBs:                   0  out of    210     0%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    135     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                4  out of     32    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Clock Signal                                         | Clock buffer(FF name)                                                                                                                             | Load  |
+-----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+CLK_S(CLK_S1:O)                                      | NONE(*)(bram_v/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram)| 1     |
+cmt/clkout0                                          | BUFG                                                                                                                                              | 1     |
+clk_in1_clk_out2_AND_1_o(clk_in1_clk_out2_AND_1_o1:O)| NONE(*)(CLK_S_LDC)                                                                                                                                | 1     |
+clk_in1                                              | NONE(CLK_S_C)                                                                                                                                     | 2     |
+-----------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                     | Buffer(FF name)                                                                                                                                | Load  |
+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+bram_v/N1(bram_v/XST_GND:G)        | NONE(bram_v/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram)| 4     |
+-----------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 0.829ns
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 0.001ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in1_clk_out2_AND_1_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.829ns (Levels of Logic = 1)
+  Source:            clk_in1 (PAD)
+  Destination:       CLK_S_LDC (LATCH)
+  Destination Clock: clk_in1_clk_out2_AND_1_o falling
+
+  Data Path: clk_in1 to CLK_S_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2:I0->O            2   0.097   0.283  clk_in1_clk_out2_AND_2_o1 (clk_in1_clk_out2_AND_2_o)
+     LDC:CLR                   0.349          CLK_S_LDC
+    ----------------------------------------
+    Total                      0.829ns (0.546ns logic, 0.283ns route)
+                                       (65.8% logic, 34.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_in1'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              0.829ns (Levels of Logic = 1)
+  Source:            clk_in1 (PAD)
+  Destination:       CLK_S_C (FF)
+  Destination Clock: clk_in1 rising
+
+  Data Path: clk_in1 to CLK_S_C
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LUT2:I0->O            2   0.097   0.283  clk_in1_clk_out2_AND_1_o1 (clk_in1_clk_out2_AND_1_o)
+     FDP:PRE                   0.349          CLK_S_P
+    ----------------------------------------
+    Total                      0.829ns (0.546ns logic, 0.283ns route)
+                                       (65.8% logic, 34.2% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               0.001ns (Levels of Logic = 1)
+  Source:            clk_in1 (PAD)
+  Destination:       cmt/mmcm_adv_inst:CLKIN1 (PAD)
+
+  Data Path: clk_in1 to cmt/mmcm_adv_inst:CLKIN1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUFG:I->O            0   0.001   0.000  cmt/clkin1_buf (cmt/clkin1)
+    MMCME2_ADV:CLKIN1          0.000          cmt/mmcm_adv_inst
+    ----------------------------------------
+    Total                      0.001ns (0.001ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 16.14 secs
+ 
+--> 
+
+Total memory usage is 410516 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   36 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
